@@ -465,5 +465,10 @@ yarl==1.17.2
 zipp==3.21.0
     # via importlib-metadata
 
+azure-core
+azure-ai-textanalytics 
+azure-storage-blob 
+azure-identity
+
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

@@ -5,14 +5,25 @@
 cd "${0%/*}" || exit 1
 
 cd ../
-echo 'Creating python virtual environment ".venv"'
-python3 -m venv .venv
+
+echo 'Activating Conda environment "azure-openai"'
+
+# Source the correct Conda initialization script
+if [ -f "$HOME/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+    source "$HOME/opt/anaconda3/etc/profile.d/conda.sh"
+else
+    echo "Could not find conda.sh. Please check your Conda installation."
+    exit 1
+fi
+
+# Activate the Conda environment
+conda activate azure-openai || { echo "Failed to activate Conda environment"; exit 1; }
 
 echo ""
 echo "Restoring backend python packages"
 echo ""
 
-./.venv/bin/python -m pip install -r app/backend/requirements.txt
+pip install -r app/backend/requirements.txt
 out=$?
 if [ $out -ne 0 ]; then
     echo "Failed to restore backend python packages"
@@ -50,7 +61,7 @@ cd ../backend
 
 port=50505
 host=localhost
-../../.venv/bin/python -m quart --app main:app run --port "$port" --host "$host" --reload
+quart --app main:app run --port "$port" --host "$host" --reload
 out=$?
 if [ $out -ne 0 ]; then
     echo "Failed to start backend"
