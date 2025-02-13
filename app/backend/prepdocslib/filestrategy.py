@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import List, Optional
 
 from azure.core.credentials import AzureKeyCredential
@@ -62,7 +63,7 @@ class FileStrategy(Strategy):
         self.document_action = document_action
         self.embeddings = embeddings
         self.image_embeddings = image_embeddings
-        self.search_analyzer_name = search_analyzer_name
+        self.search_analyzer_name = os.getenv("AZURE_SEARCH_ANALYZER_NAME") #search_analyzer_name
         self.search_info = search_info
         self.use_acls = use_acls
         self.category = category

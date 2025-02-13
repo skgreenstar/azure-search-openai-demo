@@ -58,7 +58,7 @@ class SearchManager:
         search_images: bool = False,
     ):
         self.search_info = search_info
-        self.search_analyzer_name = search_analyzer_name
+        self.search_analyzer_name = os.getenv("AZURE_SEARCH_ANALYZER_NAME") #search_analyzer_name
         self.use_acls = use_acls
         self.use_int_vectorization = use_int_vectorization
         self.embeddings = embeddings

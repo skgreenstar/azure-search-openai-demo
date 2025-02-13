@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import Optional
 
 from azure.search.documents.indexes._generated.models import (
@@ -55,7 +56,7 @@ class IntegratedVectorizerStrategy(Strategy):
         self.embeddings = embeddings
         self.subscription_id = subscription_id
         self.search_user_assigned_identity = search_service_user_assigned_id
-        self.search_analyzer_name = search_analyzer_name
+        self.search_analyzer_name = os.getenv("AZURE_SEARCH_ANALYZER_NAME") #search_analyzer_name
         self.use_acls = use_acls
         self.category = category
         self.search_info = search_info

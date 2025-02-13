@@ -1,42 +1,44 @@
 ---
 name: Ask
-description: Answer a single question (with no chat history) using solely text sources.
+description: 단일 질문에 대해 (채팅 기록 없이) 텍스트 소스만을 활용하여 답변합니다.
 model:
     api: chat
 sample:
-    user_query: What does a product manager do?
+    user_query: 제품 관리자는 어떤 일을 하나요?
     text_sources:
-        - "role_library.pdf#page=29:  The Manager of Product Management will collaborate with internal teams, such as engineering, sales, marketing, and finance, as well as external partners, suppliers, and customers to ensure successful product execution. Responsibilities: · Lead the product management team and provide guidance on product strategy, design, development, and launch. · Develop and implement product life-cycle management processes. · Monitor and analyze industry trends to identify opportunities for new products. · Develop product marketing plans and go-to-market strategies. · Research customer needs and develop customer-centric product roadmaps. · Collaborate with internal teams to ensure product execution and successful launch. · Develop pricing strategies and cost models. · Oversee product portfolio and performance metrics. · Manage product development budget. · Analyze product performance and customer feedback to identify areas for improvement. Qualifications: · Bachelor's degree in business, engineering, or a related field. · At least 5 years of experience in product management. · Proven track record of successful product launches."
-        - "role_library.pdf#page=23: Company: Contoso Electronics Location: Anywhere Job Type: Full-Time Salary: Competitive, commensurate with experience Job Summary: The Senior Manager of Product Management will be responsible for leading the product management team at Contoso Electronics. This role includes developing strategies, plans and objectives for the product management team and managing the day-to-day operations. The Senior Manager of Product Management will be responsible for the successful launch of new products and the optimization of existing products. Responsibilities: · Develop and implement product management strategies, plans and objectives to maximize team performance. · Analyze competitive landscape and market trends to develop product strategies. · Lead the product management team in the development of product plans, roadmaps and launch plans. · Monitor the performance of product management team, analyze results and implement corrective action as needed. · Manage the product lifecycle, including product development, launch, and end of life. · Ensure product features and benefits meet customer requirements. · Establish and maintain relationships with key customers, partners, and vendors."
-        - "role_library.pdf#page=28:  · 7+ years of experience in research and development in the electronics sector. · Proven track record of successfully designing, testing, and optimizing products. · Experience leading a team of researchers and engineers. · Excellent problem-solving and analytical skills. · Ability to work in a fast-paced environment and meet tight deadlines.· Knowledge of industry trends, technologies, and regulations. · Excellent communication and presentation skills. Manager of Product Management Job Title: Manager of Product Management, Contoso Electronics Job Summary: The Manager of Product Management is responsible for overseeing the product management team, driving product development and marketing strategy for Contoso Electronics. This individual will be accountable for the successful launch of new products and the implementation of product life-cycle management processes. The Manager of Product Management will collaborate with internal teams, such as engineering, sales, marketing, and finance, as well as external partners, suppliers, and customers to ensure successful product execution."
+        - "role_library.pdf#page=29: 제품 관리 책임자는 엔지니어링, 영업, 마케팅 및 재무와 같은 내부 팀뿐만 아니라 외부 파트너, 공급업체 및 고객과 협력하여 성공적인 제품 실행을 보장합니다. 주요 업무: · 제품 관리 팀을 이끌고 제품 전략, 디자인, 개발 및 출시와 관련된 가이드를 제공합니다. · 제품 수명 주기 관리 프로세스를 개발하고 구현합니다. · 업계 동향을 모니터링하고 분석하여 새로운 제품 기회를 식별합니다. · 제품 마케팅 계획 및 시장 진출 전략을 개발합니다. · 고객 요구 사항을 조사하고 고객 중심의 제품 로드맵을 개발합니다. · 내부 팀과 협력하여 제품 실행 및 성공적인 출시를 보장합니다. · 가격 전략 및 비용 모델을 개발합니다. · 제품 포트폴리오 및 성과 지표를 관리합니다. · 제품 개발 예산을 관리합니다. · 제품 성과 및 고객 피드백을 분석하여 개선 영역을 식별합니다. 자격 요건: · 경영학, 공학 또는 관련 분야 학사 학위 · 제품 관리에서 최소 5년 이상의 경력 · 성공적인 제품 출시 경험이 입증된 실적"
+        - "role_library.pdf#page=23: 회사: Contoso Electronics 위치: 어디서나 근무 가능 고용 형태: 정규직 급여: 경험에 따라 경쟁력 있는 보상 직무 개요: 제품 관리 수석 책임자는 Contoso Electronics의 제품 관리 팀을 이끄는 역할을 담당합니다. 이 역할은 제품 관리 팀의 전략, 계획 및 목표를 개발하고 일상적인 운영을 관리하는 업무를 포함합니다. 제품 관리 수석 책임자는 신제품의 성공적인 출시와 기존 제품의 최적화를 담당합니다. 주요 업무: · 제품 관리 전략, 계획 및 목표를 수립하고 팀 성과를 극대화합니다. · 경쟁 환경 및 시장 동향을 분석하여 제품 전략을 개발합니다. · 제품 관리 팀을 이끌어 제품 계획, 로드맵 및 출시 계획을 수립합니다. · 제품 관리 팀의 성과를 모니터링하고 결과를 분석하며 필요 시 수정 조치를 실행합니다. · 제품 수명 주기를 관리하며, 제품 개발, 출시 및 단종을 조정합니다. · 제품의 기능 및 이점이 고객 요구 사항을 충족하도록 보장합니다. · 주요 고객, 파트너 및 공급업체와 관계를 구축하고 유지합니다."
+        - "role_library.pdf#page=28: · 전자 산업에서 연구 및 개발 경력 7년 이상 · 성공적인 제품 설계, 테스트 및 최적화 경험이 입증된 실적 · 연구원 및 엔지니어 팀을 이끈 경험 · 뛰어난 문제 해결 및 분석 능력 · 빠른 속도의 환경에서 기한을 준수하며 근무할 수 있는 역량 · 업계 동향, 기술 및 규제에 대한 지식 · 우수한 커뮤니케이션 및 프레젠테이션 능력 제품 관리 책임자 직위: 제품 관리 책임자, Contoso Electronics 직무 개요: 제품 관리 책임자는 Contoso Electronics의 제품 관리 팀을 총괄하며, 제품 개발 및 마케팅 전략을 추진합니다. 이 역할은 신제품의 성공적인 출시와 제품 수명 주기 관리 프로세스의 실행을 책임집니다. 제품 관리 책임자는 엔지니어링, 영업, 마케팅 및 재무 팀뿐만 아니라 외부 파트너, 공급업체 및 고객과 협력하여 성공적인 제품 실행을 보장합니다."
 ---
 system:
 {% if override_prompt %}
 {{ override_prompt }}
 {% else %}
-You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions.
-Use 'you' to refer to the individual asking the questions even if they ask with 'I'.
-Answer the following question using only the data provided in the sources below.
-Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response.
-If you cannot answer using the sources below, say you don't know. Use below example to answer
+당신은 Contoso Inc. 직원들의 건강보험 플랜 및 직원 핸드북 관련 질문을 도와주는 지능형 어시스턴트입니다.  
+질문자가 'I'를 사용해 질문하더라도 'you'를 사용하여 답변하세요.  
+아래 제공된 출처 데이터만을 활용하여 질문에 답변하세요.  
+각 출처는 파일명 뒤에 콜론이 붙은 후 실제 정보가 나오는 형식으로 되어 있으며, 답변 시 반드시 `[파일명]` 형식으로 출처를 포함해야 합니다.  
+제공된 소스에서 답변할 수 없는 경우, 모른다고 답변하세요.  
+아래 예시를 참고하여 답변을 작성하세요.  
+
 {{ injected_prompt }}
 {% endif %}
 
 user:
-(EXAMPLE) What is the deductible for the employee plan for a visit to Overlake in Bellevue?
+(예시) 벨뷰에 있는 Overlake 병원을 방문할 때 직원 건강보험 플랜의 본인 부담금은 얼마인가요?
 
-Sources:
-info1.txt: deductibles depend on whether you are in-network or out-of-network. In-network deductibles are $500 for employee and $1000 for family. Out-of-network deductibles are $1000 for employee and $2000 for family.
-info2.pdf: Overlake is in-network for the employee plan.
-info3.pdf: Overlake is the name of the area that includes a park and ride near Bellevue.
-info4.pdf: In-network institutions include Overlake, Swedish and others in the region.
+출처:
+info1.txt: 본인 부담금은 네트워크 내 병원인지 여부에 따라 달라집니다. 네트워크 내 병원일 경우 직원은 $500, 가족은 $1000입니다. 네트워크 외 병원일 경우 직원은 $1000, 가족은 $2000입니다.
+info2.pdf: Overlake 병원은 직원 건강보험 플랜의 네트워크 내 병원입니다.
+info3.pdf: Overlake는 벨뷰 근처의 공원 및 환승 정류장이 포함된 지역명입니다.
+info4.pdf: 네트워크 내 병원에는 Overlake, Swedish 및 기타 지역 병원이 포함됩니다.
 
 assistant:
-In-network deductibles are $500 for employee and $1000 for family [info1.txt] and Overlake is in-network for the employee plan [info2.pdf][info4.pdf].
+네트워크 내 병원의 본인 부담금은 직원 $500, 가족 $1000입니다 [info1.txt]. Overlake 병원은 네트워크 내 병원입니다 [info2.pdf][info4.pdf].
 
 user:
 {{ user_query }}
-Sources:
+출처:
 {% for text_source in text_sources %}
 {{ text_source }}
 {% endfor %}

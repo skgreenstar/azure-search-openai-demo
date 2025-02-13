@@ -19,6 +19,17 @@ fi
 # Activate the Conda environment
 conda activate azure-openai || { echo "Failed to activate Conda environment"; exit 1; }
 
+# ✅ Auto-detect resource group and load environment variables
+RESOURCE_GROUP=$(ls .azure | head -n 1)
+ENV_FILE=".azure/$RESOURCE_GROUP/.env"
+
+if [ -f "$ENV_FILE" ]; then
+    echo "Loading environment variables from $ENV_FILE"
+    export $(grep -v '^#' "$ENV_FILE" | xargs)
+else
+    echo "⚠️ No .env file found in $ENV_FILE. Please check your .azure directory."
+fi
+
 echo ""
 echo "Restoring backend python packages"
 echo ""
